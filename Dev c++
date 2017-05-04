@@ -6,3 +6,17 @@
 #include <string.h> // palavras
 #include <windows.h> //alterçãos de cores fundos e letras
 #include <locale.h> //
+int () { // inicializar
+return 0; // retorna ao começo erro zero
+}
+//Variaveis
+//char(caracter);
+//int(inteiro);
+//float(real,flutuante);
+//double(ponto flutuante de dupla precisão);
+//void(sem valor);
+
+
+//Atribuição de valores
+//quant = 15; -> Atribuição
+//sinal de igual x == y
