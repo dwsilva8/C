@@ -1,0 +1,8 @@
+#include <stdio.h> // inicialização e finalização
+#include <stdlib.h> // funções auxiliares
+#include <conio.h> // funções matematicas
+#include <math.h> // funções matematicas elaboradasd
+#include <time.h> //tempo
+#include <string.h> // palavras
+#include <windows.h> //alterçãos de cores fundos e letras
+#include <locale.h> //
