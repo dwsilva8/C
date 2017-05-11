@@ -1,0 +1,30 @@
+int main() {
+	int qntd;
+	float valor, preco;
+	printf("Quantas bala tu queres: ");
+	scanf("%d", &qntd);
+	switch (qntd){
+		case 1 ... 50:
+	    preco= 0.30;
+		break;
+		
+		case 51 ... 100:
+		preco=0.25;
+		break;
+		
+		case 101 ... 200:
+		preco=0.22;
+		break;
+		
+		case 201 ... 400:
+		preco=0.17;
+		break;
+		
+		default:
+		preco=0.15; 
+	}
+	
+	
+	valor=qntd*preco;
+	printf("Total a pagares: %.2f", valor);
+	}
