@@ -1,0 +1,34 @@
+WHILE 
+
+#include <stdio.h>
+#include<conio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <time.h>
+#include <string.h>
+#include <windows.h>
+
+int main () {
+	float vale=500, vlrcompra, saldo,cont=0;
+    
+		
+	do{
+	printf("Insira o valor da compra: ");
+		scanf("%f", &vlrcompra);
+		if(vale>vlrcompra){
+			vale=vale-vlrcompra;
+			printf("Seu saldo é: %f \n", vale);
+		    cont=(float)cont+1;
+		}
+			else
+			{
+				printf("Saldo insuficiente \n");
+				cont=(float)cont+0;
+			}
+			
+			printf("Total de compras efetuadas pelo usuário: %.2f \n",cont);
+	
+	}
+	while(vale<0);
+	
+	}
