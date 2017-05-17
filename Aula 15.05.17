@@ -1,34 +1,60 @@
-WHILE 
-
-#include <stdio.h>
-#include<conio.h>
-#include <stdlib.h>
+#include <stdio.h>                         
+#include <stdlib.h>                       
+#include <conio.h>  
+#include <time.h>                    
 #include <locale.h>
-#include <time.h>
-#include <string.h>
 #include <windows.h>
 
-int main () {
-	float vale=500, vlrcompra, saldo,cont=0;
+int main (){
+
+setlocale (LC_ALL,"PORTUGUESE");
+
     
-		
-	do{
-	printf("Insira o valor da compra: ");
-		scanf("%f", &vlrcompra);
-		if(vale>vlrcompra){
-			vale=vale-vlrcompra;
-			printf("Seu saldo é: %f \n", vale);
-		    cont=(float)cont+1;
-		}
-			else
-			{
-				printf("Saldo insuficiente \n");
-				cont=(float)cont+0;
-			}
-			
-			printf("Total de compras efetuadas pelo usuário: %.2f \n",cont);
-	
-	}
-	while(vale<0);
-	
-	}
+int numcomp=0;
+float vlrcomp, saldo=500;
+    
+
+//1° Insere um escreva para dar boas vindas para o usuário;
+printf ("\n||SEJA BEM VINDO AO CREDCARD!||\n\n");
+
+
+//2°Função Do/While para que primeiramente efetue a compra para depois verificar se existe saldo suficiente;
+    do{
+        
+//3°Informar saldo do usuário e informar valor da compra;        
+    printf ("\n\nSeu saldo é de: %.2f", saldo);
+    printf ("\n\nValor da compra: ");
+    scanf ("%f", &vlrcomp);
+    
+//4°Comando "limpatela", para que apareça apenas os comandos acima, após efetuada uma compra;
+
+    system("cls");    
+    
+//5°Função if/else, onde testaremos se o valor é suficiente para realizar uma compra;    
+    if(saldo>=vlrcomp){        
+    saldo=saldo-vlrcomp;    
+    printf ("\n\nO valor da compra foi de: %.2f\nE seu saldo é de:%.2f\n\n ",vlrcomp,saldo);
+    
+//6°Variável "numcomp", para informar quantas compras foram realizadas;    
+    numcomp=numcomp+1;    
+    printf("Você efetuou %i compras até agora. ",numcomp);
+    Sleep(3500);
+    system ("cls");
+        
+    }
+    else {
+//7°Caso saldo seja insuficiente, informar na tela e após 2500ms retornar a tela de compra inicial;
+        printf ("\n\nSaldo insuficiente\n\n");
+        Sleep(2500);
+        system ("cls");
+}
+
+    
+    
+}
+//8°Caso saldo seja igual a 0, uma mensagem é enviada ao usuário e após, o programa se encerra.
+ while (saldo>0);
+ 
+ printf("\n\n***Não é possivel efetuar compras, favor aguardar próxima recarga.***\n\n ");
+
+}
