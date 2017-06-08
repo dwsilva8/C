@@ -1,0 +1,116 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+
+int main (){
+	int x,z,y;
+	printf("Digite o primeiro valor: ");
+	scanf("%i",&x);
+	printf("Digite o segundo valor: ");
+	scanf("%i",&y);
+	
+	printf("O resultado da função é: %i",soma(x,y));
+	
+	system("pause");
+	return 0;	
+
+	}
+  
+  #include <stdio.h>
+#include <stdlib.h>
+#include <conio.h>
+#include <locale.h>
+#include "mybibadiego.h"
+
+
+int main (){
+	int a1,a2,a3,a4;
+	
+	printf("Digite o primeiro valor: ");
+	scanf("%i",&a1);
+	printf("Digite o segundo valor: ");
+	scanf("%i",&a2);
+	printf("Digite o terceiro valor: ");
+	scanf("%i",&a3);
+	a4=maiorr(a1,a2,a3);
+	
+	printf("o maior valor é: %i\n",a4);
+	system("pause");
+	return 0;
+}
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <conio.h>
+#include <locale.h>
+#include "mybibadiego.h"
+
+
+
+int main(){
+	
+	setlocale(LC_ALL,"PORTUGUESE");
+	
+	float mediat;
+	int i,N;
+	
+	printf("Favor inserir o numero de alunos: ");
+	scanf("%i",&N);
+	float notas[N];
+	
+	for(i=0;i<N;i++){
+		printf("Insira a nota do %iº aluno: ",i+1);
+		scanf("%f",&notas[i]);
+		
+	}
+	mediat=media(notas,N);
+	printf("A media da turma é %.2f\n",mediat);
+	system("pause");
+	return 0;
+}
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <conio.h>
+#include <locale.h>
+int soma(int a, int b)
+
+{
+	int resultado;
+	
+	resultado= a+ b;
+	  return resultado;
+}
+
+
+int maiorr (int a, int b, int c){
+
+int maior=0;
+
+if(a > b && a > c){
+		return a;
+	
+}
+if(b> a && b> c){
+	return b;
+}
+else{
+
+	return c;
+}
+
+}
+float media (float notas_a [], int n){
+	
+	int i=0;
+	float m= 0.0;
+	
+	for(i=0;i<n;i++){
+		m=m+ notas_a[i];
+	}
+	m=m/n;
+	return m;
+
+}
